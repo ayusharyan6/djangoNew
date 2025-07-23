@@ -19,5 +19,9 @@ from django.urls import path
 from home import views
 
 urlpatterns = [
-    path("",views.index, name= 'home')
+    path("",views.index, name= 'home'),
+    
+    path("__reload__/", include("django_browser_reload.urls")),
 ]
+
+
